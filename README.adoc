@@ -1,0 +1,19 @@
+Pet project to learn Hubot
+
+It has only one script to reply to specific commands
+
+#### To run on local box
+Required: node / docker / docker-compose
+
+* run `make cache` (to start a redis instance)
+* run `npm install`
+* run `make run`
+* then play with the bot
+
+#### To run a full test with rocket.chat
+Required: docker / docker-compose
+
+* run `make deps` (to start redis, mongo, rocket.chat)
+* create a bot (name/user/pass: bot)
+* run `make run-docker` (to start the docker containet)
+* have fun
