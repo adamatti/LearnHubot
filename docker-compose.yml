@@ -4,8 +4,12 @@ services:
     image: "redis:latest"
     expose:
       - "6379"
+    logging:  
+      driver: "none"
   db:
     image: "mongo:latest"
+    logging:
+      driver: "none"
   chat:
     image: "rocket.chat:latest"
     links:
@@ -30,4 +34,4 @@ services:
       - ROCKETCHAT_PASSWORD=bot
       - ROCKETCHAT_AUTH=password
       - ROCKETCHAT_URL=http://chat:3000
-      - BOT_NAME=hubot
+      - BOT_NAME=bot
